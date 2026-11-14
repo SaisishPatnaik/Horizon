@@ -1,0 +1,99 @@
+
+.vision-compact {
+  width: 100%;
+  min-width: 0;
+  padding: 14px 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.vision-camera-small {
+  width: 145px;
+  height: 100px;
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #080e16;
+  border: 1px solid #29475c;
+  border-radius: 7px;
+}
+
+.vision-camera-small video,
+.vision-camera-small canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transform: scaleX(-1);
+}
+
+.vision-camera-small canvas {
+  pointer-events: none;
+  z-index: 2;
+}
+
+.vision-camera-placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #42c9f5;
+}
+
+.vision-camera-indicator {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #718398;
+  z-index: 3;
+}
+
+.vision-camera-indicator.online {
+  background: #43d69a;
+  box-shadow: 0 0 9px #43d69a;
+}
+
+.vision-camera-button {
+  width: 100%;
+  min-height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: #183b50;
+  border: 1px solid #32708e;
+  color: #65d4f9;
+  border-radius: 5px;
+  font: 9px 'DM Mono', monospace;
+  cursor: pointer;
+}
+
+.vision-camera-button:hover {
+  background: #20516b;
+}
+
+.vision-camera-button.disconnect {
+  background: #46242c;
+  border-color: #85434e;
+  color: #ff9eaa;
+}
+
+.vision-camera-button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.vision-error-small {
+  width: 100%;
+  color: #ff9caa;
+  font-size: 10px;
+  line-height: 1.5;
+  margin: 0;
+}
